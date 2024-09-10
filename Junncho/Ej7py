@@ -1,0 +1,27 @@
+
+
+# Ejercicio 7: Leer 10 números enteros e imprimir su promedio, el mayor valor leído y en qué 
+# posición se encontraba. Si se ingresó más de una vez sólo debe informar la primera.
+
+
+
+NumeroParaPromedio = 0 # Inicializo los numeros pedidos en 0 para que no tenga basura (Noc si en python funciona asi)
+cantidadDeVueltas = 9 # Inicializo la cantidad de vueltas a dar
+NumeroAComparara = 0 # Con este numero voy a poder sacar el mayor
+
+NumeroDado = int(input("Me decis que numeros queres que le saque el promedio: ")) #Pido los numeros
+NumeroParaPromedio += NumeroDado # Los sumo a una variable global para despues sacar el peromedio
+NumeroAComparara = NumeroDado
+
+while cantidadDeVueltas != 0 :
+    NumeroDado = int(input("Me decis que numeros queres que le saque el promedio: ")) #Pido los numeros
+    NumeroParaPromedio += NumeroDado # Los sumo a una variable global para despues sacar el peromedio
+
+    if NumeroDado > NumeroAComparara :  # Comparo con otro numeor ya inicializado 
+        NumeroAComparara = NumeroDado
+    
+    cantidadDeVueltas -= 1
+
+
+print("El promedio es: ", (NumeroParaPromedio/10))
+print("El numero mas grande encontrado es: ", NumeroAComparara)
